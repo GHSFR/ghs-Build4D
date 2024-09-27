@@ -122,27 +122,27 @@ Class constructor($customSettings : Object)
 						: (This.settings.macCompiledProject.exists=False)
 							This._log(New object(\
 								"function"; "Class constuctor"; \
-								"message"; "macCompiledProject don't exist."; \
+								"message"; This.settings.macCompiledProject.platformPath+" don't exist."; \
 								"severity"; Error message))
 							
 							
 						: (This.settings.macCompiledProject.file(This.settings.buildName+".4DZ").exists=False)
 							This._log(New object(\
 								"function"; "Class constuctor"; \
-								"message"; "macCompiledProject 4DZ not found."; \
+								"message"; This.settings.macCompiledProject.file(This.settings.buildName+".4DZ").platformPath+" not found."; \
 								"severity"; Error message))
 							
 							
 						: ($librariesFolder.exists=False)
 							This._log(New object(\
 								"function"; "Class constuctor"; \
-								"message"; "macCompiledProject Libraries folder don't exist."; \
+								"message"; $librariesFolder.platformPath+" don't exist."; \
 								"severity"; Error message))
 							
 						: ($librariesFolder.file("lib4d-arm64.dylib").exists=False)
 							This._log(New object(\
 								"function"; "Class constuctor"; \
-								"message"; "macCompiledProject lib4d-arm64.dylib in Libraries folder not found."; \
+								"message"; $librariesFolder.file("lib4d-arm64.dylib").platformPath+" not found."; \
 								"severity"; Error message))
 							
 						Else 
