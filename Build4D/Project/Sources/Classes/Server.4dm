@@ -455,7 +455,7 @@ Function build() : Boolean
 		
 		If (OB Instance of(This.settings.macOSClientArchive; 4D.File))  //#2062
 			
-			This.settings.macOSClientArchive.moveTo($Upgrade4DClient)
+			This.settings.macOSClientArchive.copyTo($Upgrade4DClient)
 			
 			$hasClients:=True
 			
@@ -463,7 +463,7 @@ Function build() : Boolean
 		
 		If (OB Instance of(This.settings.windowsClientArchive; 4D.File))  //#2063
 			
-			This.settings.windowsClientArchive.moveTo($Upgrade4DClient)
+			This.settings.windowsClientArchive.copyTo($Upgrade4DClient)
 			
 			$hasClients:=True
 			
