@@ -130,7 +130,7 @@ Function _make4dLink() : Boolean
 	
 	DOM SET XML ATTRIBUTE($xml; \
 		"is_remote"; "true"; \
-		"server_database_name"; This.settings.buildName; \
+		"server_database_name"; (Value type(This.settings.publishName)=Is text ? This.settings.publishName : This.settings.buildName); \
 		"server_path"; $server_path)
 	
 	//#3829
